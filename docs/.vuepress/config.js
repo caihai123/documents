@@ -1,7 +1,7 @@
 module.exports = {
     title: 'caihai123',
     description: '个人在线文档',
-    base: 'documents',
+    base: '/documents/',
     //nav导航栏
     themeConfig: {
         // logo: '/logo.png',
