@@ -7,6 +7,7 @@ module.exports = {
         // logo: '/logo.png',
         lastUpdated: '上次更新：',
         smoothScroll: true,
+        plugins: ['@vuepress/back-to-top'],
         nav: [
             { text: '博客列表', link: '/blog/' },
             { text: '记录文档', link: '/record/' },
