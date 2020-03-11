@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /hero.png
+heroImage: /static/hero.png
 heroText: caihai123
 tagline: 在线记录文档
 actionText: 详情 →
