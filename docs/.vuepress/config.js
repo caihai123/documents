@@ -2,12 +2,13 @@ module.exports = {
     title: 'caihai123',
     description: '个人在线文档',
     base: '/documents/',
+    plugins: ['@vuepress/back-to-top'],
     //nav导航栏
     themeConfig: {
         // logo: '/logo.png',
         lastUpdated: '上次更新：',
         smoothScroll: true,
-        plugins: ['@vuepress/back-to-top'],
+        repo: 'caihai123/documents',
         nav: [
             { text: '博客列表', link: '/blog/' },
             { text: '记录文档', link: '/record/' },
