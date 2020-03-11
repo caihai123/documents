@@ -5,7 +5,7 @@ module.exports = {
     plugins: ['@vuepress/back-to-top'],
     //nav导航栏
     themeConfig: {
-        // logo: '/logo.png',
+        // logo: '/static/img/hero02.png',
         lastUpdated: '上次更新：',
         smoothScroll: true,
         repo: 'caihai123/documents',
