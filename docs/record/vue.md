@@ -57,6 +57,8 @@ export default {
 }
 ```
 ## 水波纹指令
+可能你还想看看这个:
+[https://www.30secondsofcode.org/react/s/ripple-button/](https://www.30secondsofcode.org/react/s/ripple-button/)
 ``` js
 /* @/directive/waves/index.js */
 import './waves.css'
