@@ -14,6 +14,7 @@ description : 主要用来记录平时用到或看见的一些插件/模块/组�
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
++ [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 查看git历史记录
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 大神提供一个后台前端解决方案，它基于 vue 和 element-ui实现。
 ## 网站
