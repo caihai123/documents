@@ -10,9 +10,10 @@ module.exports = {
         smoothScroll: true,
         repo: 'caihai123/documents',
         nav: [
-            { text: '博客列表', link: '/blog/' },
+            { text: '首页', link: '/' },
             { text: '记录文档', link: '/record/' },
-            { text: '插件收藏', link: '/plugin/' },
+            { text: '收藏夹', link: '/plugin/' },
+            { text: '博客列表', link: '/blog/' },
         ],
         sidebar: {
             '/blog/': [
