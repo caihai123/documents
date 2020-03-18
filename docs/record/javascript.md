@@ -54,9 +54,12 @@ window.addEventListener(
     console.log(window.innerWidth);
     console.log(window.innerHeight);
   }, 250)
-); 
+);
 ```
-或者：
+
+获取：[https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options](https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options)
+
+## 节流函数
 ``` js
 const throttle = (fn, wait) => {
   let inThrottle, lastFn, lastTime;
@@ -85,11 +88,9 @@ window.addEventListener(
     console.log(window.innerWidth);
     console.log(window.innerHeight);
   }, 250)
-); 
+);
 ```
-其他选择：
-+ [https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options](https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options)
-+ [throttle-debounce](https://github.com/niksy/throttle-debounce) element-ui的Backtop组件有用到
+或者：[throttle-debounce](https://github.com/niksy/throttle-debounce) element-ui的Backtop组件有用到
 
 ## 将字符串的的首字母大写
 ``` js
