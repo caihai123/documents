@@ -38,60 +38,14 @@ const copyToClipboard = str => {
 源码链接：
 [https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/)
 
-## 防抖动函数
-``` js
-const debounce = (fn, ms = 0) => {
-  let timeoutId;
-  return function(...args) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => fn.apply(this, args), ms);
-  };
-};
-// 示例：
-window.addEventListener(
-  'resize',
-  debounce(() => {
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
-  }, 250)
-);
+## 防抖动与节流
++ [throttle-debounce](https://github.com/niksy/throttle-debounce)
+``` javascript
+import { throttle, debounce } from 'throttle-debounce';
 ```
-
-获取：[https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options](https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options)
-
-## 节流函数
-``` js
-const throttle = (fn, wait) => {
-  let inThrottle, lastFn, lastTime;
-  return function() {
-    const context = this,
-      args = arguments;
-    if (!inThrottle) {
-      fn.apply(context, args);
-      lastTime = Date.now();
-      inThrottle = true;
-    } else {
-      clearTimeout(lastFn);
-      lastFn = setTimeout(function() {
-        if (Date.now() - lastTime >= wait) {
-          fn.apply(context, args);
-          lastTime = Date.now();
-        }
-      }, Math.max(wait - (Date.now() - lastTime), 0));
-    }
-  };
-};
-// 示例：
-window.addEventListener(
-  'resize',
-  throttle(function(evt) {
-    console.log(window.innerWidth);
-    console.log(window.innerHeight);
-  }, 250)
-);
-```
-或者：[throttle-debounce](https://github.com/niksy/throttle-debounce) element-ui的Backtop组件有用到
-
++ [lodashjs](https://www.lodashjs.com/)
+  - 防抖动 [_.debounce](https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options)
+  - 节流 [_.throttle](https://www.lodashjs.com/docs/latest#_throttlefunc-wait0-options)
 ## 将字符串的的首字母大写
 ``` js
 const capitalizeEveryWord = str => str.replace(/\b[a-z]/g, char => char.toUpperCase());
