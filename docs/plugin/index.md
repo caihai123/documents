@@ -12,7 +12,108 @@ description : 主要用来记录平时用到或看见的一些插件/模块/组�
 + [pinyin](https://github.com/hotoo/pinyin) 汉字拼音转换工具。
 + [vue-fragment](https://github.com/y-nk/vue-fragment) a very candide fragment component for Vue.js
 + [mockjs](http://mockjs.com/) 生成随机数据，拦截 Ajax 请求
+::: details 点击查看代码
+```javascript
+{
+    // 属性 list 的值是一个数组，其中含有 1 到 10 个元素
+    "list|1-10": [
+        {
+            "id|+1": 1,// 属性 id 是一个自增数，起始值为 1，每次增 1
+            "name1|3": '字',//生成由‘字’循环3次的字符串
+            "name2|2-3": '字',//生成由‘字’循环的字符串，循环次数大于等于2，小于等于3
+            'code|100000-999999': 1,//生成一个大于等于100000，小于等于999999的整数
+            'value1|10-99.3-5': 1,//生成一个浮点数，整数部分大于等于 min、小于等于 max，小数部分保留 dmin 到 dmax 位。
+            'value2|10.3': 1,//生成一个浮点数，整数部分是10，小数部分保留到3位。
+            'boolean1|1': true,//生成一个boolean值，ture 与 false 的概率都是1/2,
+            'boolean2|1-2': false,//随机生成一个布尔值，值为 false 的概率是 1 / (1 + 2)，值为 true 的概率是 2 / (1 + 2)。
+            'obj1|1': { '1': 1, '2': 2 },//生成一个对象，对象的key/value是从后面的对象中选出的一个
+            'obj2|1-3': { '1': 1, '2': 2, '3': 3, '4': 4 },//生成一个对象，对象的key/value是从后面的对象中选出的1到3个
+            'string|1': ['1', '2', , '3', '4'],//从数组中随机选取 1 个元素，作为最终值。
+            'string1|+1': ['1', '2', '3', '4'],//从数组中顺序选取 1 个元素，作为最终值。
+            'string2|2': ['1', '2', '3', '4'],//通过重复属性值数组生成一个新数组，重复次数为2。
+            'string3|1-2': ['1', '2', '3', '4'],//通过重复属性值数组生成一个新数组，重复次数大于等于1，小于等于2。
+            'text': function () {//执行函数 function，取其返回值作为最终的属性值，函数的上下文为属性 'name' 所在的对象。
+                return `${this.id}${this.name1}`
+            },
+            'text1': '@id@name1',//占位符 会优先引用 数据模板 中的属性。
+        }
+    ],
+    //以下的是插件默认的占位符
+    'boolean': '@boolean',//随机boolean类型
+    'natural': "@natural",//返回一个随机的自然数（大于等于 0 的整数）。参数 min：可选。指示随机自然数的最小值。默认值为 0。 参数 max：可选。指示随机自然数的最小值。默认值为 9007199254740992。
+    'integer': "@integer",//返回一个随机的整数。参数 min：可选。指示随机整数的最小值。默认值为 -9007199254740992。参数 max：可选。指示随机整数的最大值。默认值为 9007199254740992。
+    'float': "@float",//返回一个随机的浮点数。参数 min：可选。整数部分的最小值。默认值为 -9007199254740992。参数 max：可选。整数部分的最大值。默认值为 9007199254740992。参数 dmin：可选。小数部分位数的最小值。默认值为 0。参数 dmin：可选。小数部分位数的最大值。默认值为 17。
+    'character': "@character",//返回一个随机字符。参数 pool：可选。字符串。表示字符池，将从中选择一个字符返回。
+    'string': "@string",//返回一个随机字符串。参数 pool：可选。字符串。表示字符池，将从中选择一个字符返回。参数 min：可选。随机字符串的最小长度。默认值为 3。 参数 max：可选。随机字符串的最大长度。默认值为 7。
+    'range': "@range(10)",//返回一个整型数组。参数 start：必选。数组中整数的起始值。 参数 stop：可选。数组中整数的结束值（不包含在返回值中）。 参数 step：可选。数组中整数之间的步长。默认值为 1。
+    'date': "@date",//返回一个随机的日期字符串。
+    'time': "@time",//返回一个随机的时间字符串。
+    'datetime': "@datetime",//返回一个随机的日期和时间字符串。
+    'now': "@now",//返回当前的日期和时间字符串。
+    'Image': "@Image",//图片地址
+    'dataImage': "@dataImage",//图片base64
+    'Color': "@Color",//十六进制颜色码
+    'paragraph': '@paragraph',//随机生成一段文本。参数 len：可选。指示文本中句子的个数。默认值为 3 到 7 之间的随机数。参数 min：可选。指示文本中句子的最小个数。默认值为 3。参数 max：可选。指示文本中句子的最大个数。默认值为 7。
+    'cparagraph': '@cparagraph',//一段中文段落
+    'sentence': '@sentence',//随机生成一个句子，第一个的单词的首字母大写。参数 len：可选。指示句子中单词的个数。默认值为 12 到 18 之间的随机数。参数 min：可选。指示句子中单词的最小个数。默认值为 12。参数 max：可选。指示句子中单词的最大个数。默认值为 18。
+    'csentence': '@csentence',//中文的一句话
+    'word': '@word',//
+    'title': '@title',//英文标题
+    'ctitle': '@ctitle',//中文标题
+    'cword': '@cword',//中文的一个字
+
+    'first': '@first',//英文名字的 名
+    'last': '@last',//英文名字的 姓
+    'name': '@name',//英文名字
+    'cfirst': '@cfirst',//中文名字的 姓
+    'clast': '@clast',//中文名字的 名
+    'cname': '@cname',//随机生成一个常见的中文姓名。参数 count：可选。数字。指示姓名的字数，默认为 2 个或 3 个字的随机姓名。
+
+    'url': '@url',//随机生成一个 URL。
+    'domain': '@domain',//随机生成一个域名。
+    'email': '@email',//随机生成一个邮件地址。
+    'ip': '@ip',//随机生成一个 IP 地址。
+    'tld': '@tld',//随机生成一个顶级域名。
+    'county': '@county',//随机生成的地理位置一般为县或者区（带参数 true 的话生成省市区）
+    'region': '@region',//随机生成一个（中国）大区。
+    'capitalize': '@capitalize(caihai)',//把字符串的第一个字母转换为大写。
+    'upper': '@upper(caihai)',//把字符串转换为大写。
+    'lower': '@lower(CAIHAI)',//把字符串转换为小写。
+    'pick': "@pick(['a', 'e', 'i', 'o', 'u'])",//从数组中随机选取一个元素，并返回。
+    'shuffle': "@shuffle(['a', 'e', 'i', 'o', 'u'])",//打乱数组中元素的顺序，并返回。
+    'guid': '@guid',//唯一标识
+    'id': '@id',//随机生成一个 18 位身份证。
+}
+```
+:::
 + [fullPage](https://alvarotrigo.com/fullPage/zh/) 一个简单易用的库，用于创建全屏滚动网站（也称为单页网站或一页网站）。
+::: details 点击查看代码
+```js
+new fullpage("#fullpage", {
+      controlArrows: true, //（默认为 true）确定是否将 slide 的控制箭头向右或向左移动。
+      verticalCentered: true, //（默认为true）在 section 内部垂直居中。
+      scrollingSpeed: 700, //（默认 700 ）滚动转换的速度（以毫秒为单位）。
+      sectionsColor: ["#ff5f45", "#0798ec", "#fc6c7c", "grey", "#0798ec"], //为每个 section 定义 CSS background-color 属性。
+      keyboardScrolling: true, //（默认为 true ）定义是否可以使用键盘进行内容滑动。
+      anchors: [], //（默认[]）定义要在每个 section 的 URL 上显示的锚链接（#example）。
+      loopTop: false, //设置为true之后在第一屏向上滚动会去到最后一页
+      loopBottom: false, //设置为true之后在最后一屏向下滚动会回到首页
+      scrollBar: true, //（默认 false ）确定是否使用站点的滚动条。 在使用滚动条的情况下，autoScrolling 功能仍将按预期工作。 用户也可以使用滚动条自由滚动网站，当滚动完成时，fullPage.js 将适配屏幕上的部分。
+      fitToSectionDelay: 300, //（默认 1000 ）。 如果 fitToSection 设置为 true ，则延迟 以毫秒为单位进行拟合。
+      paddingTop: 0, //定义每个 section 的内边距( top )。
+      paddingBottom: 0, //（默认为 0 ）定义每个 section 的内边距( bottom )。 有利于有固定页脚的情况。
+      navigation: true, //（默认 false ）如果设置为 true ，则会显示一个由小圆圈组成的导航栏。
+      navigationPosition: "right", //可以设置为 left 或 right ，并定义导航栏显示的位置（如果使用的话）。
+      slidesNavigation: true, //是否显示横向滚动的小圆点
+      slidesNavPosition: "bottom", //（默认bottom）定义滑块的横向导航栏的位置。 值为 top 和 bottom 。 您可能需要修改 CSS 样式以确定从顶部或底部距离以及任何其他样式（如颜色）。
+      continuousVertical: false, //开启后上下滚动可无限循环
+      loopHorizontal: true, //定义水平滑块是否在到达上一张或下一张后循环。
+      normalScrollElements: ".scrollable-content" //在这个dom上滚动鼠标不会导致切屏
+    });
+```
+:::
++ [clipboard.js](http://www.clipboardjs.cn/) 复制文本
++ [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) 防抖动与节流
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
