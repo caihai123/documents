@@ -26,11 +26,15 @@ description : 这里会记录一些常用css
     -webkit-box-orient: vertical;
 }
 ```
-## 弹跳加载动画
+## 加载动画
 <bouncing-loader/>
-
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/bouncing-loader.vue
+:::
+
+<spin-loader />
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/spin-loader.vue
 :::
 
 ## 悬停时在文本周围创建一个阴影框
