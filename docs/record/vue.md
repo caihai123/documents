@@ -2,6 +2,12 @@
 title: vue
 description : 这里会记录一些vue的常用语法
 ---
+# 相关链接
++ [vue](https://cn.vuejs.org/) vue官网
++ [vue-cli](https://cli.vuejs.org/zh/) Vue.js 开发的标准脚手架
++ [Vue Router](https://router.vuejs.org/zh/) vue路由
++ [Vuex](https://vuex.vuejs.org/zh/) 全局状态管理
+
 ## vue常用模板
 ``` vue
 <template>
