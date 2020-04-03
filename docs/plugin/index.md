@@ -114,6 +114,7 @@ new fullpage("#fullpage", {
 :::
 + [clipboard.js](http://www.clipboardjs.cn/) 复制文本
 + [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) 防抖动与节流
++ [screenfull.js](https://github.com/sindresorhus/screenfull.js) 浏览器全屏插件
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具

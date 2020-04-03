@@ -79,3 +79,17 @@ fromCamelCase('someDatabaseFieldName', ' '); // 'some database field name'
 fromCamelCase('someLabelThatNeedsToBeCamelized', '-'); // 'some-label-that-needs-to-be-camelized'
 fromCamelCase('someJavascriptProperty', '_'); // 'some_javascript_property'
 ```
+
+## 防止网页被嵌入框架
+``` js
+try{
+　　top.location.hostname;
+　　if (top.location.hostname != window.location.hostname) {
+　　　　top.location.href =window.location.href;
+　　}
+}
+catch(e){
+　　top.location.href = window.location.href;
+}
+```
+> [防止网页被嵌入框架的代码-阮一峰](http://www.ruanyifeng.com/blog/2010/08/anti-frameset_javascript_codes_continued.html)
