@@ -2,6 +2,9 @@ module.exports = {
     title: 'caihai123',
     description: '个人在线文档',
     base: '/documents/',
+    head: [
+        ['script', { src: '/static/js/clicklove.js' }]
+    ],
     plugins: ['@vuepress/back-to-top'],
     //nav导航栏
     themeConfig: {
