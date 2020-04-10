@@ -117,6 +117,7 @@ new fullpage("#fullpage", {
 + [screenfull.js](https://github.com/sindresorhus/screenfull.js) 浏览器全屏插件
 + [animate.css](https://daneden.github.io/animate.css/) 最有名的css动画效果库
 + [ESLint](https://eslint.bootcss.com/) ESLint中文文档
++ [prettier](https://prettier.io/) 代码格式化工具
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
