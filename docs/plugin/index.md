@@ -115,6 +115,9 @@ new fullpage("#fullpage", {
 + [clipboard.js](http://www.clipboardjs.cn/) 复制文本
 + [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) 防抖动与节流
 + [screenfull.js](https://github.com/sindresorhus/screenfull.js) 浏览器全屏插件
++ [animate.css](https://daneden.github.io/animate.css/) 最有名的css动画效果库
++ [ESLint](https://eslint.bootcss.com/) ESLint中文文档
+
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
@@ -123,3 +126,8 @@ new fullpage("#fullpage", {
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 大神提供一个后台前端解决方案，它基于 vue 和 element-ui实现。
 ## 网站
 + [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 大神的收藏夹
++ [www.templatesy.com](http://www.templatesy.com/) 网页模板
++ [www.mituo.cn](https://www.mituo.cn/) 米拓建站
++ [https://zhuanlan.zhihu.com/p/75531199](https://zhuanlan.zhihu.com/p/75531199) 深入理解 ESLint
++ [https://juejin.im/post/5b27a326e51d45588a7dac57](https://juejin.im/post/5b27a326e51d45588a7dac57) 使用ESLint+Prettier来统一前端代码风格
++ [https://juejin.im/post/5e7c08bde51d455c4c66ddad](https://juejin.im/post/5e7c08bde51d455c4c66ddad) 写给初中级前端的高级进阶指南
