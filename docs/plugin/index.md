@@ -118,6 +118,7 @@ new fullpage("#fullpage", {
 + [animate.css](https://daneden.github.io/animate.css/) 最有名的css动画效果库
 + [ESLint](https://eslint.bootcss.com/) ESLint中文文档
 + [prettier](https://prettier.io/) 代码格式化工具
++ [CountUp.js](https://inorganik.github.io/countUp.js/) CountUp.js是一个无依赖项的轻量级JavaScript类，可用于快速创建以更有趣的方式显示数字数据的动画。
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
@@ -125,6 +126,14 @@ new fullpage("#fullpage", {
 + [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 查看git历史记录
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 大神提供一个后台前端解决方案，它基于 vue 和 element-ui实现。
++ [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
++ [vant](https://youzan.github.io/vant/#/zh-CN/) 轻量、可靠的移动端 Vue 组件库
++ [vuetify](https://vuetifyjs.com/) 一款尤大推荐的 Vue 组件库
++ [element-ui](https://element.eleme.cn/#/zh-CN) 饿了么前端推出的基于 Vue.js 2.0 的后台组件库
++ [iView](http://v1.iviewui.com/) iView 是一套基于 Vue.js 的开源 UI 组件库，主要服务于 PC 界面的中后台产品。
++ [uni-app](https://uniapp.dcloud.io/) 一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉）等多个平台。
++ [WeUI](https://github.com/Tencent/weui) 一套同微信原生视觉体验一致的基础样式库
+
 ## 网站
 + [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 大神的收藏夹
 + [www.templatesy.com](http://www.templatesy.com/) 网页模板

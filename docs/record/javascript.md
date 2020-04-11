@@ -93,3 +93,6 @@ catch(e){
 }
 ```
 > [防止网页被嵌入框架的代码-阮一峰](http://www.ruanyifeng.com/blog/2010/08/anti-frameset_javascript_codes_continued.html)
+
+## 网页鼠标点击特效（爱心）
+<<< @/docs/.vuepress/public/static/js/clicklove.js
