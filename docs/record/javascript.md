@@ -38,6 +38,8 @@ const copyToClipboard = str => {
 源码链接：
 [https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/)
 
+或者可以看看：[clipboard.js](http://www.clipboardjs.cn/)
+
 ## 防抖动与节流
 + [throttle-debounce](https://github.com/niksy/throttle-debounce)
 ``` javascript
@@ -92,7 +94,73 @@ catch(e){
 　　top.location.href = window.location.href;
 }
 ```
-> [防止网页被嵌入框架的代码-阮一峰](http://www.ruanyifeng.com/blog/2010/08/anti-frameset_javascript_codes_continued.html)
+> 参考链接：[防止网页被嵌入框架的代码-阮一峰](http://www.ruanyifeng.com/blog/2010/08/anti-frameset_javascript_codes_continued.html)
 
 ## 网页鼠标点击特效（爱心）
 <<< @/docs/.vuepress/public/static/js/clicklove.js
+
+## js异步集合处理
+```js
+// utility function for sleeping
+const sleep = (n) => new Promise((res) => setTimeout(res, n));
+```
+### 如何在Javascript中将异步函数与Array.reduce一起使用
+> 参考链接：[如何在Javascript中将异步函数与Array.reduce一起使用](https://advancedweb.hu/how-to-use-async-functions-with-array-reduce-in-javascript/)
+```js
+const arr = [1, 2, 3];
+
+const asyncRes = await arr.reduce(async (memo, e) => {
+	await sleep(10);
+	return (await memo) + e;
+}, 0);
+
+console.log(asyncRes);
+// 6
+```
+### 如何在Javascript中对Array.map使用异步函数
+> 参考链接：[如何在Javascript中对Array.map使用异步函数](https://advancedweb.hu/how-to-use-async-functions-with-array-map-in-javascript/)
+```js
+const arr = [1, 2, 3];
+
+const asyncRes = await Promise.all(arr.map(async (i) => {
+	await sleep(10);
+	return i + 1;
+}));
+
+console.log(asyncRes);
+// 2,3,4
+```
+### 如何在Javascript中对Array.forEach使用异步函数
+> 参考链接：[如何在Javascript中对Array.forEach使用异步函数](https://advancedweb.hu/how-to-use-async-functions-with-array-foreach-in-javascript/)
+``` js
+const arr = [1, 2, 3];
+
+await Promise.all(arr.map(async (i) => {
+	await sleep(10 - i);
+	console.log(i);
+}));
+
+// 3
+// 2
+// 1
+
+console.log("Finished async");
+// Finished async
+```
+### 如何在Javascript中将异步函数与Array.filter一起使用
+> 参考链接：[如何在Javascript中将异步函数与Array.filter一起使用](https://advancedweb.hu/how-to-use-async-functions-with-array-filter-in-javascript/)
+```js
+const arr = [1, 2, 3, 4, 5];
+
+const asyncFilter = async (arr, predicate) => {
+	const results = await Promise.all(arr.map(predicate));
+	return arr.filter((_v, index) => results[index]);
+}
+
+const asyncRes = await asyncFilter(arr, async (i) => {
+	await sleep(10);
+	return i % 2 === 0;
+});
+
+console.log(asyncRes);
+```
