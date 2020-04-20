@@ -116,10 +116,12 @@ new fullpage("#fullpage", {
 + [throttle-debounce](https://www.npmjs.com/package/throttle-debounce) 防抖动与节流
 + [screenfull.js](https://github.com/sindresorhus/screenfull.js) 浏览器全屏插件
 + [animate.css](https://daneden.github.io/animate.css/) 最有名的css动画效果库
++ [wow.js](https://www.npmjs.com/package/wow.js) 向下滚动页面时显示CSS动画。默认情况下，您可以使用它来触发animate.css动画。
++ [aos](https://www.npmjs.com/package/aos) 在滚动时为页面上的元素设置动画。
 + [ESLint](https://eslint.bootcss.com/) ESLint中文文档
 + [prettier](https://prettier.io/) 代码格式化工具
 + [CountUp.js](https://inorganik.github.io/countUp.js/) CountUp.js是一个无依赖项的轻量级JavaScript类，可用于快速创建以更有趣的方式显示数字数据的动画。
-
++ [Swiper](https://www.swiper.com.cn/) 开源、免费、强大的触摸滑动插件
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具

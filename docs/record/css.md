@@ -58,3 +58,12 @@ description : 这里会记录一些常用css
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/table-cell-middle.vue
 :::
+
+## Animate.css
+<Animate-demo/>
+
+## 几个按钮
+<pan-btn/>
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/pan-btn.vue
+:::
