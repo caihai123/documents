@@ -9,6 +9,7 @@ description : 这里会记录一些vue的常用语法
 + [Vuex](https://vuex.vuejs.org/zh/) 全局状态管理
 
 ## vue常用模板
+::: details 点击查看代码
 ``` vue
 <template>
 
@@ -33,7 +34,9 @@ export default {
 
 </style>
 ```
+:::
 或者在你的vscode中添加下面的代码片段：
+::: details 点击查看代码
 ``` json
 {
 	"Print to console": {
@@ -62,9 +65,11 @@ export default {
 	}
 }
 ```
+:::
 ## 水波纹指令
 可能你还想看看这个:
 [https://www.30secondsofcode.org/react/s/ripple-button/](https://www.30secondsofcode.org/react/s/ripple-button/)
+::: details 点击查看代码
 ``` js
 /* @/directive/waves/index.js */
 import './waves.css'
@@ -140,6 +145,8 @@ export default {
   }
 }
 ```
+:::
+::: details 点击查看代码
 ``` css
 /* @/directive/waves/waves.css */
 .waves-ripple {
@@ -169,6 +176,7 @@ export default {
     transition: opacity 1.2s ease-out, transform 0.6s ease-out, -webkit-transform 0.6s ease-out;
 }
 ```
+:::
 全局注册
 ``` js
 import Vue from "vue"
@@ -184,6 +192,12 @@ directives: {
   waves:waves
 }
 ```
-## 让数字动起来 
+## 让数字动起来
 <CountUpDemo />
+::: details 点击查看代码
 <<< @/docs/.vuepress/components/CountUp.vue
+:::
+## 滚动吸顶
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/Sticky.vue
+:::
