@@ -145,3 +145,4 @@ new fullpage("#fullpage", {
 + [https://zhuanlan.zhihu.com/p/75531199](https://zhuanlan.zhihu.com/p/75531199) 深入理解 ESLint
 + [https://juejin.im/post/5b27a326e51d45588a7dac57](https://juejin.im/post/5b27a326e51d45588a7dac57) 使用ESLint+Prettier来统一前端代码风格
 + [https://juejin.im/post/5e7c08bde51d455c4c66ddad](https://juejin.im/post/5e7c08bde51d455c4c66ddad) 写给初中级前端的高级进阶指南
++ [https://docsmall.com/](https://docsmall.com/) 免费在线图片压缩、GIF压缩工具、PDF压缩工具、PDF合并工具、PDF分割工具
