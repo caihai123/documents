@@ -16,7 +16,6 @@
 import { throttle } from "throttle-debounce";//npm i throttle-debounce
 
 export default {
-  name: "ElBacktop",
   props: {
     visibilityHeight: {
       type: Number,
