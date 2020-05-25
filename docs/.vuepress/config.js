@@ -31,7 +31,8 @@ module.exports = {
                         'lodash的debounce仿抖动函数',
                         'es6模块',
                         'es6构造函数',
-                        'javascript原型'
+                        'javascript原型',
+                        'HTTP Cache-Control 缓存机制'
                     ]
                 },
             ],
