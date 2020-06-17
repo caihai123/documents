@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lodash的debounce仿抖动函数 | caihai123</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <script src="/documents/static/js/clicklove.js"></script>
+    <meta name="description" content="个人在线文档">
+    <link rel="preload" href="/documents/assets/css/0.styles.50c6235f.css" as="style"><link rel="preload" href="/documents/assets/js/app.c76233bf.js" as="script"><link rel="preload" href="/documents/assets/js/2.101af862.js" as="script"><link rel="preload" href="/documents/assets/js/22.53f3cf29.js" as="script"><link rel="prefetch" href="/documents/assets/js/10.cdb35165.js"><link rel="prefetch" href="/documents/assets/js/11.6c2ec410.js"><link rel="prefetch" href="/documents/assets/js/12.c6476ac5.js"><link rel="prefetch" href="/documents/assets/js/13.91114317.js"><link rel="prefetch" href="/documents/assets/js/14.ca62e667.js"><link rel="prefetch" href="/documents/assets/js/15.6e5141b0.js"><link rel="prefetch" href="/documents/assets/js/16.d0ff81d2.js"><link rel="prefetch" href="/documents/assets/js/17.1f61a572.js"><link rel="prefetch" href="/documents/assets/js/18.7aa21158.js"><link rel="prefetch" href="/documents/assets/js/19.b70bad60.js"><link rel="prefetch" href="/documents/assets/js/20.885c9742.js"><link rel="prefetch" href="/documents/assets/js/21.914cd735.js"><link rel="prefetch" href="/documents/assets/js/23.ab2df176.js"><link rel="prefetch" href="/documents/assets/js/24.40e71814.js"><link rel="prefetch" href="/documents/assets/js/25.b37310ce.js"><link rel="prefetch" href="/documents/assets/js/26.383fc2e3.js"><link rel="prefetch" href="/documents/assets/js/27.b408d9a0.js"><link rel="prefetch" href="/documents/assets/js/28.d40c299b.js"><link rel="prefetch" href="/documents/assets/js/29.c37f30df.js"><link rel="prefetch" href="/documents/assets/js/3.005dc65a.js"><link rel="prefetch" href="/documents/assets/js/30.8c1686e7.js"><link rel="prefetch" href="/documents/assets/js/31.2f74f70a.js"><link rel="prefetch" href="/documents/assets/js/4.7425a5b2.js"><link rel="prefetch" href="/documents/assets/js/5.cd4c3042.js"><link rel="prefetch" href="/documents/assets/js/6.404b8a5f.js"><link rel="prefetch" href="/documents/assets/js/7.69ab90f1.js"><link rel="prefetch" href="/documents/assets/js/8.4cadcc69.js"><link rel="prefetch" href="/documents/assets/js/9.fc3001e9.js">
+    <link rel="stylesheet" href="/documents/assets/css/0.styles.50c6235f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/documents/" class="home-link router-link-active"><!----> <span class="site-name">caihai123</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/record/" class="nav-link">
+  记录文档
+</a></div><div class="nav-item"><a href="/documents/plugin/" class="nav-link">
+  收藏夹
+</a></div><div class="nav-item"><a href="/documents/blog/" class="nav-link router-link-active">
+  博客列表
+</a></div> <a href="https://github.com/caihai123/documents" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/documents/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/documents/record/" class="nav-link">
+  记录文档
+</a></div><div class="nav-item"><a href="/documents/plugin/" class="nav-link">
+  收藏夹
+</a></div><div class="nav-item"><a href="/documents/blog/" class="nav-link router-link-active">
+  博客列表
+</a></div> <a href="https://github.com/caihai123/documents" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>博客列表</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/documents/blog/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/documents/blog/图片懒加载与ajax懒加载.html" class="sidebar-link">图片懒加载和ajax懒加载</a></li><li><a href="/documents/blog/后端返回的long型数据丢失.html" class="sidebar-link">后端返回的long型数据丢失</a></li><li><a href="/documents/blog/网页背景水印代码记录.html" class="sidebar-link">网页背景水印</a></li><li><a href="/documents/blog/lodash的debounce仿抖动函数.html" class="active sidebar-link">lodash的debounce仿抖动函数</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/documents/blog/lodash的debounce仿抖动函数.html#参数" class="sidebar-link">参数</a></li><li class="sidebar-sub-header"><a href="/documents/blog/lodash的debounce仿抖动函数.html#返回" class="sidebar-link">返回</a></li><li class="sidebar-sub-header"><a href="/documents/blog/lodash的debounce仿抖动函数.html#例子" class="sidebar-link">例子</a></li><li class="sidebar-sub-header"><a href="/documents/blog/lodash的debounce仿抖动函数.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/documents/blog/es6模块.html" class="sidebar-link">export与import(ES6 module模快)</a></li><li><a href="/documents/blog/es6构造函数.html" class="sidebar-link">ES6构造函数</a></li><li><a href="/documents/blog/javascript原型.html" class="sidebar-link">详细记录js的原型链</a></li><li><a href="/documents/blog/HTTP Cache-Control 缓存机制.html" class="sidebar-link">HTTP Cache-Control 缓存机制</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>今天做一个展开收起的一个组件，为了适应用户不停的改变窗口宽度的情况，用到了resize函数，也就是在窗口尺寸改变时不停的执行某个函数，
+理论上虽然可以，但是这种高频率的触发事件，不仅会损耗页面性能，出现导致页面卡顿，页面抖动，如果你的函数中有一些异步操作时，
+还可能导致结果的顺序不一致，为了防止这种情况，我找到了这个。</p> <p><a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer">https://www.lodashjs.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，他说它是一个一致性、模块化、高性能的 JavaScript 实用工具库，应该很有用的，
+有时间研究下，但是今天我只看了他的debounce（仿抖动）函数，点击<a href="https://www.lodashjs.com/docs/latest#_debouncefunc-wait0-options" target="_blank" rel="noopener noreferrer">这里<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+查看文档。</p> <p>其实就一个函数：_.debounce(func, wait, options)</p> <h2 id="参数"><a href="#参数" class="header-anchor">#</a> 参数</h2> <ul><li>func (Function): 要防抖动的函数。</li> <li>[wait=0] (number): 需要延迟的毫秒数。</li> <li>[options={}] (Object): 选项对象。</li> <li>[options.leading=false] (boolean): 指定在延迟开始前调用。</li> <li>[options.maxWait] (number): 设置 func 允许被延迟的最大值。</li> <li>[options.trailing=true] (boolean): 指定在延迟结束后调用。</li></ul> <h2 id="返回"><a href="#返回" class="header-anchor">#</a> 返回</h2> <p>(Function): 返回新的 debounced（防抖动）函数。（就是说它执行完之后会返回一个新的debounced函数）</p> <h2 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h2> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token comment">//没有添加debounced</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'resize'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//添加了debounced仿抖动函数</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'resize'</span><span class="token punctuation">,</span>_<span class="token punctuation">.</span><span class="token function">debounce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">200</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+        leading<span class="token operator">:</span><span class="token boolean">false</span><span class="token punctuation">,</span>
+        maxWait<span class="token operator">:</span><span class="token number">1000</span><span class="token punctuation">,</span>
+        trailing<span class="token operator">:</span><span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>它好像还有个函数throttle，下次再补~</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新：:</span> <span class="time">3/9/2020, 1:57:42 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/documents/blog/网页背景水印代码记录.html" class="prev">
+        网页背景水印
+      </a></span> <span class="next"><a href="/documents/blog/es6模块.html">
+        export与import(ES6 module模快)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/documents/assets/js/app.c76233bf.js" defer></script><script src="/documents/assets/js/2.101af862.js" defer></script><script src="/documents/assets/js/22.53f3cf29.js" defer></script>
+  </body>
+</html>
