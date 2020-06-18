@@ -510,3 +510,41 @@ console.log(localeString);
 // expected output: "1,a,12/21/1997, 2:12:00 PM",
 // This assumes "en" locale and UTC timezone - your results may vary
 ```
+## 数字格式功能
+``` js
+const formatNumber = function (num, options) {
+  var defaults = {
+    decimalPlaces: 0,//小数点后数量
+    decimal: '.',
+    separator: ',',//分组分隔符
+    prefix: '',//前缀
+    suffix: '',//后缀
+    numerals: []
+  }
+  /**
+   * 如果项目中有lodashjs,建议换成_assign()函数
+   * https://www.lodashjs.com/docs/lodash.assign
+   * */
+  var _options = Object.assign(Object.assign({}, defaults), options);
+  var neg = (num < 0) ? '-' : '';
+  var result, x, x1, x2, x3 = '';
+  result = Math.abs(num).toFixed(_options.decimalPlaces);
+  result += '';
+  x = result.split('.');
+  x1 = x[0];
+  x2 = x.length > 1 ? _options.decimal + x[1] : '';
+  for (var i = 0, len = x1.length; i < len; ++i) {
+    if (i !== 0 && (i % 3) === 0) {
+      x3 = _options.separator + x3;
+    }
+    x3 = x1[len - i - 1] + x3;
+  }
+  x1 = x3;
+  // 可选数字替换
+  if (_options.numerals && _options.numerals.length) {
+    x1 = x1.replace(/[0-9]/g, function (w) { return _options.numerals[+w]; });
+    x2 = x2.replace(/[0-9]/g, function (w) { return _options.numerals[+w]; });
+  }
+  return neg + _options.prefix + x1 + x2 + _options.suffix;
+};
+```
