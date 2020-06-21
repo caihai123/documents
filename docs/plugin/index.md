@@ -124,6 +124,8 @@ new fullpage("#fullpage", {
 + [CountUp.js](https://inorganik.github.io/countUp.js/) CountUp.js是一个无依赖项的轻量级JavaScript类，可用于快速创建以更有趣的方式显示数字数据的动画。
 + [Swiper](https://www.swiper.com.cn/) 开源、免费、强大的触摸滑动插件
 + [lodashjs](https://www.lodashjs.com/) 前端工具函数集合
++ [element-resize-detector](https://www.npmjs.com/package/element-resize-detector) 可以检测dom元素大小改变，不仅仅是浏览器宽度改变
+
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
