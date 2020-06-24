@@ -207,3 +207,70 @@ directives: {
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/Backtop.vue
 :::
+
+## 饿了么上传组件修改为上传base64
+> 只处理了转成base64的功能
+``` vue
+<template>
+  <el-upload
+    class="avatar-uploader"
+    action="#"
+    :show-file-list="false"
+    :auto-upload="false"
+    :on-change="onChange"
+  >
+    <img v-if="value" :src="value" class="avatar" />
+    <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  </el-upload>
+</template>
+
+<script>
+export default {
+  props: {
+    value: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    onChange() {
+      var _this = this;
+      var event = event || window.event;
+      var _file = event.target.files[0];
+      var reader = new FileReader();
+      //转base64
+      reader.onload = function(e){
+        _this.$emit("input", e.target.result);
+      };
+      reader.readAsDataURL(_file);
+    }
+  }
+};
+</script>
+
+<style scoped>
+.avatar-uploader >>> .el-upload {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.avatar-uploader >>> .el-upload:hover {
+  border-color: #409eff;
+}
+.avatar-uploader-icon {
+  width: 88px;
+  height: 88px;
+  line-height: 88px;
+  text-align: center;
+  font-size: 28px;
+  color: #8c939d;
+}
+.avatar {
+  display: block;
+  width: 88px;
+  height: 88px;
+}
+</style>
+```
