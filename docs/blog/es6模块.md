@@ -155,7 +155,8 @@ keywords: "这个是篇关键字"
 需要知道的有几个地方
 + 在html引入模块时，必须将type属性设置为module，意思就是告诉浏览器它是一个模块。
 + 这个项目需要启动一个HTTP服务器来访问，以 file:// 协议直接打开是不行的。
-+ 不要看见我的示例三就以为所有js文件都能引入进来，我在使用案例中将axios注释掉就是说明这样是不行，原因是这个js是通过this将axios对象定义在全局的，这样引入就等于告诉浏览器它是个模块，模块中最顶层的this为undefined，如果你真要引入，就去它官网看看它有没有提供这种原生module的文件，就像我引入的vue一样，它有给我说这个<img src="/static/img/vuebrowser.png"  height="216" width="884">,如果没有也可以自己手动修改一下，但不建议这么做，怕改出问题。
++ 不要看见我的示例三就以为所有js文件都能引入进来，我在使用案例中将axios注释掉就是说明这样是不行，原因是这个js是通过this将axios对象定义在全局的，这样引入就等于告诉浏览器它是个模块，模块中最顶层的this为undefined，如果你真要引入，就去它官网看看它有没有提供这种原生module的文件，就像我引入的vue一样，它有给我说这个
+<img :src="$withBase('/static/img/vuebrowser.png')"  height="216" width="884">,如果没有也可以自己手动修改一下，但不建议这么做，怕改出问题。
 ## 与CommonJS模块的区别
  ES6模块和CommonJS模块虽然很像，但他们不是一个东西，CommonJS是用于node环境也就是服务器端的，而ES6模块是浏览器，服务器通用。顺便分享一下他们的教程，这两个大神写的，应该不会有异议吧。
 + module模块  [http://es6.ruanyifeng.com/#docs/module](http://es6.ruanyifeng.com/#docs/module) 阮一峰

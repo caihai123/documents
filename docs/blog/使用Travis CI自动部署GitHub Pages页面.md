@@ -23,19 +23,21 @@ description : 使用Travis CI自动部署GitHub Pages页面
 然后你需要有一个Travis CI账号：点击进入 [Travis CI](https://travis-ci.org/) 后直接使用github账号注册。
 
 点击自己头像 `>` 点击`Settings`,找到你的vuepress项目并选中，就像这样
-![avatar](/static\img/travis-01.png)
+<img :src="$withBase('/static/img/travis-01.png')" alt="foo">
 
 然后回到github页面，点击自己头像 `>` settings `>` Developer settings `>` Personal access tokens `>` 点击生成令牌
-![avatar](/static\img/git-token.png)
+<img :src="$withBase('/static/img/git-token.png')" alt="foo">
+
 你只需要选择截图中的权限，然后到最下面点击生成
-![avatar](/static\img/token.png)
+<img :src="$withBase('/static/img/token.png')" alt="foo">
+
 这时候你需要将他复制出来找个安全的地方保存，因为页面刷新之后你就看不见了，只能重新生成。
 
 现在回到 `Travis CI` 页面，找到你的`vuepress`项目，点击后面的设置
-![avatar](/static\img/travis-setting.png)
+<img :src="$withBase('/static/img/travis-setting.png')" alt="foo">
 
 找到这个地方，在这里加上你刚才获取到的`GITHUB_TOKEN`
-![avatar](/static\img/setting-token.png)
+<img :src="$withBase('/static/img/setting-token.png')" alt="foo">
 
 现在去到你的vuePress项目代码，在根项目下创建`.travis.yml`文件，这个属于`Travis CI`的配置文件，在`Travis CI`拉到你的代码后会通过里面的规则执行构建，就像这样
 ``` yml
@@ -100,7 +102,7 @@ deploy:
     branch: gh-page
 ```
 也就是说将源码放在`gh-page`分支，当代码变更的时候拉取`gh-page`分支的代码执行打包，然后将打包后的`dist`推送到`master`分支上。但是当我提交代码之后，
-![avatar](/static/img/travix-log.png)
+<img :src="$withBase('/static/img/travix-log.png')" alt="foo">
 
 意思是不允许推送到这个分支，想想也还好理解，这个分支是有点特殊。正当我要放弃的时候又发现了另外一种方式，不禁感叹别人的智慧，果然牛逼
 ``` yml
