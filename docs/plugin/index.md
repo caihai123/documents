@@ -125,6 +125,7 @@ new fullpage("#fullpage", {
 + [Swiper](https://www.swiper.com.cn/) 开源、免费、强大的触摸滑动插件
 + [lodashjs](https://www.lodashjs.com/) 前端工具函数集合
 + [element-resize-detector](https://www.npmjs.com/package/element-resize-detector) 可以检测dom元素大小改变，不仅仅是浏览器宽度改变
++ [vue-fragment](https://github.com/Thunberg087/vue-fragment#readme) 虚拟根节点
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
