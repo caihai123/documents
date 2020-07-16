@@ -649,3 +649,167 @@ export {
 };
 ```
 :::
+
+## get缓存和防止同时发起相同的请求
+> 其实我也不太确定这个代码有没有必要做
+
+::: details 点击查看代码
+``` js
+/**
+ * 对get请求进行包装
+ * 提供数据缓存和防止同时发起相同的请求
+ * 相同的路径 相同的参数就可以理解为相同的请求
+ */
+
+import axios from "./interceptors";
+import md5 from "md5"; // npm i md5
+
+const promiseRecord = {};
+
+//将对象的属性重新排序
+function objKeySort(obj) {
+  let newkey = Object.keys(obj).sort(); //先用Object内置类的keys方法获取要排序对象的属性名，再利用Array原型上的sort方法对获取的属性名进行排序，newkey是一个数组
+  let newObj = {}; //创建一个新的对象，用于存放排好序的键值对
+  let len = newkey.length;
+  for (var i = 0; i < len; i++) {
+    //遍历newkey数组
+    newObj[newkey[i]] = obj[newkey[i]]; //向新创建的对象中按照排好的顺序依次增加键值对
+  }
+  return newObj; //返回排好序的新对象
+}
+
+/**
+ * 通过路径和参数生成唯一字符
+ * @param {*} apiUrl
+ * @param {*} params
+ */
+const createKey = (apiUrl, params) => {
+  return md5(apiUrl + JSON.stringify(objKeySort(params)));
+};
+
+// 普通的 get 请求
+const get = (apiUrl, params = {}) => {
+  return axios.get(apiUrl, { params });
+};
+
+/**
+ * 用来发起需要缓存的请求
+ * @param {String} apiUrl
+ * @param {Object} params
+ * @param {Boolean} refresh 可能在某些情况下不能使用缓存必须到后台获取
+ */
+const getCache = (apiUrl, params = {}, refresh = false) => {
+  // 用请求路径和参数生成标识，完全相同的请求的标识一样，作为储存的键
+  let keyName = createKey(apiUrl, params);
+
+  return new Promise((resolve, reject) => {
+    let data = sessionStorage.getItem(keyName);
+
+    let request = () => {
+      get(apiUrl, params)
+        .then((value) => {
+          sessionStorage.setItem(keyName, JSON.stringify(value));
+          resolve(value);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    };
+
+    if (data && !refresh) {
+      // 如果用户手动修改了 sessionStorage 里的数据可能会出错，应该做下处理
+      try {
+        let value = JSON.parse(data);
+        resolve(value);
+      } catch (e) {
+        request();
+      }
+    } else {
+      request();
+    }
+  });
+};
+
+/**
+ * 防止重复处理
+ */
+const repeat = (apiUrl, params, request, refresh) => {
+  // 用请求路径和参数生成标识，完全相同的请求的标识一样，可以使用同一个请求结果
+  let keyName = createKey(apiUrl, params);
+
+  if (!promiseRecord[keyName]) {
+    promiseRecord[keyName] = new Promise((resolve, reject) => {
+      request(apiUrl, params, refresh)
+        .then((value) => {
+          promiseRecord[keyName] = null;
+          resolve(value);
+        })
+        .catch((error) => {
+          promiseRecord[keyName] = null;
+          reject(error);
+        });
+    });
+  }
+
+  return promiseRecord[keyName];
+};
+
+/**
+ * 返回请求的函数
+ * @param {String} apiUrl
+ * @param {Object} params
+ * @param {Object} options 配置项
+ */
+const getAxios = (apiUrl, params = {}, options = {}) => {
+  // 默认配置
+  let defaults = {
+    cache: false, // 是否开启缓存
+    repeat: false, // 是否开启防止同时发起相同的请求
+    refresh: false, // 是否刷新（这里也不能保证会刷新，因为get也有缓存，只能保证它会发出请求）
+  };
+  let _options = Object.assign(Object.assign({}, defaults), options);
+
+  // 什么都不需要 返回原始的axiso get请求
+  if (!_options.cache && !_options.repeat) {
+    return get(apiUrl, params);
+  }
+
+  // 只需要缓存
+  if (_options.cache && !_options.repeat) {
+    return getCache(apiUrl, params, _options.refresh);
+  }
+
+  // 只需要防止同时发起相同的请求
+  if (!_options.cache && _options.repeat) {
+    return repeat(apiUrl, params, get);
+  }
+
+  // 小孩子才做选择,成年人全都要
+  if (_options.cache && _options.repeat) {
+    return repeat(apiUrl, params, getCache, _options.refresh);
+  }
+};
+
+export { getAxios };
+```
+:::
+
+使用方式
+``` js
+import { getAxios } from "./get-axios";
+
+export const getMenuList = (params, refresh = false) => {
+  return getAxios("/applet/jsons/caihai.json", params, {
+    cache: true,
+    repeat: true,
+    refresh: refresh,
+  });
+};
+```
+``` js
+import { getMenuList } from "@/api/index";
+
+getMenuList().then((value) => {
+  console.log(this.options);
+});
+```
