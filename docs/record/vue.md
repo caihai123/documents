@@ -274,3 +274,76 @@ export default {
 }
 </style>
 ```
+## 防止异步按钮被疯狂点击
+
+::: tip
+这个功能的实现方式应该有很多种，目前想到的有，后端对接口做限制，前端可以使用防抖函数，或者自己写个定时器控制loading状态。
+但我认为最合理的应该还是在异步回调中再恢复loading的状态。
+:::
+
+::: details 点击查看代码
+``` vue
+<template>
+  <el-button
+    v-bind="$attrs"
+    v-on="$listeners"
+    :loading="loading"
+    @click="event"
+  >
+    <slot></slot>
+  </el-button>
+</template>
+
+<script>
+import "zone.js"; // npm i zone.js
+
+export default {
+  props: {
+    click: {
+      type: Function,
+      default: () => {},
+    },
+  },
+  data() {
+    return {
+      loading: false,
+    };
+  },
+  methods: {
+    event() {
+      let self = this;
+      /**
+       * loading 改变时会触发dom的更新
+       * 将它放在 ZoneDom 下修改而不监听它
+       * 否则会出现死循环
+       * */
+      let ZoneDom = window.Zone.current.fork({});
+      window.Zone.current
+        .fork({
+          // 当有异步操作时触发
+          onScheduleTask(delegate, currentZone, targetZone, task) {
+            ZoneDom.run(() => {
+              self.loading = true;
+            });
+            return delegate.scheduleTask(targetZone, task);
+          },
+          onHasTask(delegate, current, target, hasTaskState) {
+            if (!hasTaskState.macroTask && !hasTaskState.microTask) {
+              ZoneDom.run(() => {
+                self.loading = false;
+              });
+            }
+          },
+        })
+        .run(() => {
+          if (!self.loading) {
+            self.click();
+          }
+        });
+    },
+  },
+};
+</script>
+
+```
+:::
