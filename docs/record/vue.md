@@ -210,6 +210,7 @@ directives: {
 
 ## 饿了么上传组件修改为上传base64
 > 只处理了转成base64的功能
+::: details 点击查看代码
 ``` vue
 <template>
   <el-upload
@@ -274,6 +275,7 @@ export default {
 }
 </style>
 ```
+:::
 ## 防止异步按钮被疯狂点击
 
 ::: tip

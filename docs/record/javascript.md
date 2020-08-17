@@ -4,6 +4,7 @@ description : 这里会记录一些js的常用代码块
 ---
 
 ## 获取地址栏参数
+::: details 点击查看代码
 ``` js
 // 将参数封装成对象
 function allUrlParam() {
@@ -21,7 +22,9 @@ function allUrlParam() {
     return theRequest;
 };
 ```
+:::
 ## js复制
+::: details 点击查看代码
 ``` js
 const copyToClipboard = str => {
   const el = document.createElement('textarea');
@@ -35,6 +38,7 @@ const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 ```
+:::
 源码链接：
 [https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/](https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript/)
 
@@ -511,6 +515,7 @@ console.log(localeString);
 // This assumes "en" locale and UTC timezone - your results may vary
 ```
 ## 数字格式功能
+::: details 点击查看代码
 ``` js
 const formatNumber = function (num, options) {
   var defaults = {
@@ -548,6 +553,7 @@ const formatNumber = function (num, options) {
   return neg + _options.prefix + x1 + x2 + _options.suffix;
 };
 ```
+:::
 
 ## 无接口模拟登录
 ::: details 点击查看代码
