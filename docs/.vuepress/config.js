@@ -32,7 +32,8 @@ module.exports = {
                         'es6模块',
                         'es6构造函数',
                         'javascript原型',
-                        'HTTP Cache-Control 缓存机制'
+                        'HTTP Cache-Control 缓存机制',
+                        '使用Travis CI自动部署GitHub Pages页面'
                     ]
                 },
             ],

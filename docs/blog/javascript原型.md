@@ -18,7 +18,10 @@ keywords: "这个是篇关键字"
 
     console.log(Person.prototype);
 ```
-在上面的代码中，我定义一个构造函数Person，函数也是一种对象，并且它有个叫prototype的属性，我直接将这个属性打印出来，发现它也是一个对象，而这个对象就是我们今天的主角，原型。具体原型什么样的，我截了张图：![Image text](/static/img/prototype01.png)图中你看到的这个对象就是Person的原型；而它的里面发现有两个属性：constructor和__proto__；我们都不用将constructor打印出来，直接就能看出它就是我们的构造函数Person，然后我们就可以得出今天的一个结论：在构造函数的原型上，有个叫constructor的属性，而这个属性就是我们的构造函数本身。然后我们来看一下这个__proto__属性，在这之前我们接着上面的代码继续写，先实例出一个Person的对象p1，然后将它打印出来：
+在上面的代码中，我定义一个构造函数Person，函数也是一种对象，并且它有个叫prototype的属性，我直接将这个属性打印出来，发现它也是一个对象，而这个对象就是我们今天的主角，原型。具体原型什么样的，我截了张图：
+<img :src="$withBase('/static/img/prototype01.png')">
+
+图中你看到的这个对象就是Person的原型；而它的里面发现有两个属性：constructor和__proto__；我们都不用将constructor打印出来，直接就能看出它就是我们的构造函数Person，然后我们就可以得出今天的一个结论：在构造函数的原型上，有个叫constructor的属性，而这个属性就是我们的构造函数本身。然后我们来看一下这个__proto__属性，在这之前我们接着上面的代码继续写，先实例出一个Person的对象p1，然后将它打印出来：
 
 ``` js
     var p1 = new  Person("蔡海");

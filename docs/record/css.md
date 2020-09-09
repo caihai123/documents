@@ -2,7 +2,29 @@
 title: css
 description : 这里会记录一些常用css
 ---
+## 几个按钮
+<pan-btn />
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/pan-btn.vue
+:::
+
+<neon-btn />
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/neon-btn.vue
+:::
+
+<circle-btn />
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/circle-btn.vue
+:::
+
+<frozen-btn />
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/frozen-btn.vue
+:::
+
 ## css文字省略
+::: details 点击查看代码
 ``` css
 .ellipsis{
     overflow: hidden;
@@ -17,7 +39,7 @@ description : 这里会记录一些常用css
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-/* 最多显示两三的文字 */
+/* 最多显示三行的文字 */
 .multi-ellipsis-3{
     display: -webkit-box;
     overflow: hidden;
@@ -26,6 +48,7 @@ description : 这里会记录一些常用css
     -webkit-box-orient: vertical;
 }
 ```
+:::
 ## 加载动画
 <bouncing-loader/>
 ::: details 点击查看代码
@@ -61,9 +84,3 @@ description : 这里会记录一些常用css
 
 ## Animate.css
 <Animate-demo/>
-
-## 几个按钮
-<pan-btn/>
-::: details 点击查看代码
-<<< @/docs/.vuepress/components/pan-btn.vue
-:::

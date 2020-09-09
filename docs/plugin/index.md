@@ -125,6 +125,8 @@ new fullpage("#fullpage", {
 + [Swiper](https://www.swiper.com.cn/) 开源、免费、强大的触摸滑动插件
 + [lodashjs](https://www.lodashjs.com/) 前端工具函数集合
 + [element-resize-detector](https://www.npmjs.com/package/element-resize-detector) 可以检测dom元素大小改变，不仅仅是浏览器宽度改变
++ [vue-fragment](https://github.com/Thunberg087/vue-fragment#readme) 虚拟根节点
++ [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock) 解决滚动穿透问题
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
@@ -142,6 +144,7 @@ new fullpage("#fullpage", {
 + [Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn/)  [Ant Design](https://ant.design/index-cn) 的 Vue 实现，开发和服务于企业级后台产品。
 
 ## 网站
++ [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
 + [awesome-bookmarks](https://panjiachen.github.io/awesome-bookmarks/) 大神的收藏夹
 + [www.templatesy.com](http://www.templatesy.com/) 网页模板
 + [www.mituo.cn](https://www.mituo.cn/) 米拓建站
@@ -149,3 +152,5 @@ new fullpage("#fullpage", {
 + [https://juejin.im/post/5b27a326e51d45588a7dac57](https://juejin.im/post/5b27a326e51d45588a7dac57) 使用ESLint+Prettier来统一前端代码风格
 + [https://juejin.im/post/5e7c08bde51d455c4c66ddad](https://juejin.im/post/5e7c08bde51d455c4c66ddad) 写给初中级前端的高级进阶指南
 + [https://docsmall.com/](https://docsmall.com/) 免费在线图片压缩、GIF压缩工具、PDF压缩工具、PDF合并工具、PDF分割工具
++ [http://idea.medeming.com/jets/](http://idea.medeming.com/jets/) idea激活码
++ [https://icons.bootcss.com/](https://icons.bootcss.com/) Bootstrap 图标库
