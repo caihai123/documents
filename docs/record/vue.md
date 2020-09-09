@@ -207,3 +207,8 @@ directives: {
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/Backtop.vue
 :::
+
+## 让 model 值传递多次
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/multiple-model.vue
+:::
