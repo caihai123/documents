@@ -211,6 +211,7 @@ directives: {
 ## 让 model 值传递多次
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/multiple-model.vue
+:::
 
 ## 饿了么上传组件修改为上传base64
 > 只处理了转成base64的功能
@@ -280,6 +281,7 @@ export default {
 </style>
 ```
 :::
+
 ## 防止异步按钮被疯狂点击
 
 ::: tip
