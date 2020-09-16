@@ -819,3 +819,82 @@ getMenuList().then((value) => {
   console.log(this.options);
 });
 ```
+## ES6,ES7常用语法
++ `let` 和 `const`
++ 模板字符串
++ 箭头函数
++ 函数参数默认值
++ `Object.assing()`
++ `Promise`
+``` js
+let promise = new Promise(function(resolve, reject) {
+  if (/* 异步操作成功 */){
+    resolve(value);
+  } else {
+    reject(error);
+  }
+});
+
+promise.then(value => {
+ // success
+}).catch(error => {
+ // failure
+});
+```
+> `Promise.all` 方法用于将多个 `Promise` 实例，包装成一个新的 `Promise` 实例。
+``` js
+let p = Promise.all([p1,p2,p3]);
+p.then([v1, v2, v3] =>{
+  // 都成功
+}).catch(error => {
+  // 任意一个失败
+})
+```
++ `async` 和 `await`
++ 解构赋值
+> 解构赋值语法是一种 Javascript 表达式。通过解构赋值, 可以将属性/值从对象/数组中取出,赋值给其他变量。
+``` js
+let [a, b] = [10, 20];
+console.log(a); // 10
+console.log(b); // 20
+//--------------分割线--------------
+let { a, b } = { a: 10, b: 20 }
+console.log(a); // 10
+console.log(b); // 20
+```
++ 对象扩展
+> 属性简写：允许对象中直接写变量 ，这时属性名为变量名 ，属性值为变量值
+``` js
+let name = 'ch';
+let age = 18;
+const user = {
+  name,
+  age,
+}
+```
+> 对象中方法简写：可以省略function关键字
+``` js
+const preson = {
+  method: function(){}
+}
+// 写为
+const preson = {
+  method(){}
+}
+``` 
++ Proxy 对象代理
+> Proxy 对象用于定义基本操作的自定义行为
+``` js
+const handler = {
+    get: function(obj, prop) {
+        return prop in obj ? obj[prop] : 37;
+    },
+    set: function(obj, prop, value){
+      console.log(value)
+    }
+};
+
+const p = new Proxy({}, handler);
+console.log(p.name); // 37,
+p.name = 'ch';// 这时会打印 'ch'
+```
