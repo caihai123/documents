@@ -574,16 +574,16 @@ let _keyContent =
 let _interval = 10 * 60 * 1000;// token过期时间
 
 // 登录
-let _login = (username, password) => {
+let login = (username, password) => {
   if (username === _username && password === _password) {
-    _setCookie();
+    setCookie();
     return true;
   } else {
     return false;
   }
 };
 // 加密存储token到cookie
-let _setCookie = () => {
+let setCookie = () => {
   const encryStr = _encryption.encryption(
     JSON.stringify({
       _username: _username,
@@ -600,7 +600,7 @@ let _setCookie = () => {
 * 可以用来在页面跳转的时候做验证
 * 验证成功时会重置token过期时间
 */
-let _validation = () => {
+let validation = () => {
   let cookie = document.cookie;
 
   if (!cookie) {
@@ -627,14 +627,14 @@ let _validation = () => {
         TokenData._password === _password &&
         TokenData.date + _interval > new Date().getTime()
       ) {
-        _setCookie();
+        setCookie();
         return true;
       } else {
         return false;
       }
     } catch (e) {
       //如果token被用户手动修改后解密会失败
-      _uplogin();
+      uplogin();
       return false;
     }
   } else {
@@ -644,15 +644,15 @@ let _validation = () => {
 };
 
 // 退出登录
-let _uplogin = () => {
+let uplogin = () => {
   document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 };
 
 export {
-  login: _login,
-  validation: _validation,
-  uplogin: _uplogin,
-};
+  login,
+  validation,
+  uplogin,
+}
 ```
 :::
 
