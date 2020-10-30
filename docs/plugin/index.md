@@ -133,7 +133,7 @@ new fullpage("#fullpage", {
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
 + [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 查看git历史记录
 ## 框架
-+ [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 大神提供一个后台前端解决方案，它基于 vue 和 element-ui实现。
++ [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
 + [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
 + [vant](https://youzan.github.io/vant/#/zh-CN/) 轻量、可靠的移动端 Vue 组件库
 + [vuetify](https://vuetifyjs.com/) 一款尤大推荐的 Vue 组件库
