@@ -127,6 +127,7 @@ new fullpage("#fullpage", {
 + [element-resize-detector](https://www.npmjs.com/package/element-resize-detector) 可以检测dom元素大小改变，不仅仅是浏览器宽度改变
 + [vue-fragment](https://github.com/Thunberg087/vue-fragment#readme) 虚拟根节点
 + [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock) 解决滚动穿透问题
++ [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 一个基于微信小程序的mini全局状态管理库
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
