@@ -898,3 +898,33 @@ const p = new Proxy({}, handler);
 console.log(p.name); // 37,
 p.name = 'ch';// 这时会打印 'ch'
 ```
+
+## 时间相关函数
+
+### 将时间戳转为字符串格式
+```js
+function timeFormat(time, format = 'yyyy-MM-dd') {
+  const t = new Date(parseInt(time));
+  const tf = function (i) {
+    return (i < 10 ? '0' : '') + i;
+  };
+  return format.replace(/yyyy|MM|dd|HH|mm|ss/g, (a) => {
+    switch (a) {
+      case 'yyyy':
+        return tf(t.getFullYear());
+      case 'MM':
+        return tf(t.getMonth() + 1);
+      case 'mm':
+        return tf(t.getMinutes());
+      case 'dd':
+        return tf(t.getDate());
+      case 'HH':
+        return tf(t.getHours());
+      case 'ss':
+        return tf(t.getSeconds());
+      default:
+        break;
+    }
+  });
+}
+```
