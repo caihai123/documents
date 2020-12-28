@@ -554,6 +554,10 @@ const formatNumber = function (num, options) {
 };
 ```
 :::
+或者
+``` js
+const formatNumber = (num) => parseFloat(num).toLocaleString('en-US');
+```
 
 ## 无接口模拟登录
 ::: details 点击查看代码
