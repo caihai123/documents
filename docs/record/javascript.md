@@ -932,3 +932,13 @@ function timeFormat(time, format = 'yyyy-MM-dd') {
   });
 }
 ```
+
+## 数组去重
+``` js
+const deDupe = (myArray) => [...new Set(myArray)];
+```
+## RGB 颜色转 16进制颜色
+``` js
+const RGBToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
+RGBToHex(255, 165, 1); // 'ffa501'
+```
