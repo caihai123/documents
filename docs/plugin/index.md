@@ -145,6 +145,7 @@ new fullpage("#fullpage", {
 + [WeUI](https://github.com/Tencent/weui) 一套同微信原生视觉体验一致的基础样式库
 + [Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn/)  [Ant Design](https://ant.design/index-cn) 的 Vue 实现，开发和服务于企业级后台产品。
 + [quasar](http://www.quasarchs.com/) vue组件库
++ [bootstrapVue](https://code.z01.com/bootstrap-vue/) Bootstrap的vue版本
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
