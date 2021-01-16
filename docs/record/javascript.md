@@ -22,6 +22,26 @@ function allUrlParam() {
     return theRequest;
 };
 ```
+``` js
+// 将参数封装成对象
+function allUrlParam(){
+  const params = new URLSearchParams(location.search);
+  const iterator = params.entries();
+  const theRequest = new Object();
+  for(let e of iterator){
+    theRequest[e[0]] = e[1]
+  }
+  return theRequest
+}
+// 使用对象生成搜索字符串
+function createParamsString(params){
+  const searchParams = new URLSearchParams();
+  for(let key in params){
+    searchParams.set(key, params[key]);
+  }
+  return searchParams.toString()
+}
+```
 :::
 ## js复制
 ::: details 点击查看代码
