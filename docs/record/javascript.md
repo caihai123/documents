@@ -574,6 +574,10 @@ const formatNumber = function (num, options) {
 };
 ```
 :::
+或者
+``` js
+const formatNumber = (num) => parseFloat(num).toLocaleString('en-US');
+```
 
 ## 无接口模拟登录
 ::: details 点击查看代码
@@ -917,4 +921,44 @@ const handler = {
 const p = new Proxy({}, handler);
 console.log(p.name); // 37,
 p.name = 'ch';// 这时会打印 'ch'
+```
+
+## 时间相关函数
+
+### 将时间戳转为字符串格式
+```js
+function timeFormat(time, format = 'yyyy-MM-dd') {
+  const t = new Date(parseInt(time));
+  const tf = function (i) {
+    return (i < 10 ? '0' : '') + i;
+  };
+  return format.replace(/yyyy|MM|dd|HH|mm|ss/g, (a) => {
+    switch (a) {
+      case 'yyyy':
+        return tf(t.getFullYear());
+      case 'MM':
+        return tf(t.getMonth() + 1);
+      case 'mm':
+        return tf(t.getMinutes());
+      case 'dd':
+        return tf(t.getDate());
+      case 'HH':
+        return tf(t.getHours());
+      case 'ss':
+        return tf(t.getSeconds());
+      default:
+        break;
+    }
+  });
+}
+```
+
+## 数组去重
+``` js
+const deDupe = (myArray) => [...new Set(myArray)];
+```
+## RGB 颜色转 16进制颜色
+``` js
+const RGBToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
+RGBToHex(255, 165, 1); // 'ffa501'
 ```

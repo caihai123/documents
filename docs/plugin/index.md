@@ -127,6 +127,8 @@ new fullpage("#fullpage", {
 + [element-resize-detector](https://www.npmjs.com/package/element-resize-detector) 可以检测dom元素大小改变，不仅仅是浏览器宽度改变
 + [vue-fragment](https://github.com/Thunberg087/vue-fragment#readme) 虚拟根节点
 + [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock) 解决滚动穿透问题
++ [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 一个基于微信小程序的mini全局状态管理库
++ [vue-print-nb](https://www.npmjs.com/package/vue-print-nb) 这是用于打印，简单，快速，方便，轻便的指令包装。
 
 ### VS Code
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
@@ -142,6 +144,9 @@ new fullpage("#fullpage", {
 + [uni-app](https://uniapp.dcloud.io/) 一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉）等多个平台。
 + [WeUI](https://github.com/Tencent/weui) 一套同微信原生视觉体验一致的基础样式库
 + [Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn/)  [Ant Design](https://ant.design/index-cn) 的 Vue 实现，开发和服务于企业级后台产品。
++ [quasar](http://www.quasarchs.com/) vue组件库
++ [bootstrapVue](https://code.z01.com/bootstrap-vue/) Bootstrap的vue版本
++ [flutter](http://flutter.axuer.com/) Flutter中文官网
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
