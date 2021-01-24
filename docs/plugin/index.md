@@ -159,3 +159,4 @@ new fullpage("#fullpage", {
 + [https://docsmall.com/](https://docsmall.com/) 免费在线图片压缩、GIF压缩工具、PDF压缩工具、PDF合并工具、PDF分割工具
 + [http://idea.medeming.com/jets/](http://idea.medeming.com/jets/) idea激活码
 + [https://icons.bootcss.com/](https://icons.bootcss.com/) Bootstrap 图标库
++ [VuePress](https://vuepress.vuejs.org/zh/) Vue 驱动的静态网站生成器，本网站就是用的这个
