@@ -134,6 +134,14 @@ new fullpage("#fullpage", {
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
 + [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 查看git历史记录
++ [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag) 自动闭合html标签
++ [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) 显示文件最近的commit和作者，显示当前行commit信息
++ [Path Autocomplete](https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete) 模块引入时路径提示
+``` json
+"path-autocomplete.pathMappings":{
+    "@":"${folder}/src"
+}
+```
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
 + [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
