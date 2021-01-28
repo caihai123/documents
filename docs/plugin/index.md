@@ -131,6 +131,8 @@ new fullpage("#fullpage", {
 + [vue-print-nb](https://www.npmjs.com/package/vue-print-nb) 这是用于打印，简单，快速，方便，轻便的指令包装。
 
 ### VS Code
++ [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
++ [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 启动一个本地开发服务
 + [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) 自动重命名 html 标签，如修改\<a>为\<b>，将自动修改结尾标签\</a>为\</b>
 + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) VS Code的Vue工具
 + [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph) 查看git历史记录
