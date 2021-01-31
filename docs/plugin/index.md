@@ -170,3 +170,4 @@ new fullpage("#fullpage", {
 + [http://idea.medeming.com/jets/](http://idea.medeming.com/jets/) idea激活码
 + [https://icons.bootcss.com/](https://icons.bootcss.com/) Bootstrap 图标库
 + [VuePress](https://vuepress.vuejs.org/zh/) Vue 驱动的静态网站生成器，本网站就是用的这个
++ [any-rule](https://any86.github.io/any-rule/) 常用正则大全
