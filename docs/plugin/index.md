@@ -129,6 +129,7 @@ new fullpage("#fullpage", {
 + [body-scroll-lock](https://github.com/willmcpo/body-scroll-lock) 解决滚动穿透问题
 + [wxMiniStore](https://github.com/xiaoyao96/wxMiniStore) 一个基于微信小程序的mini全局状态管理库
 + [vue-print-nb](https://www.npmjs.com/package/vue-print-nb) 这是用于打印，简单，快速，方便，轻便的指令包装。
++ [v-click-outside](https://www.npmjs.com/package/v-click-outside) vue自定义指令，点击元素外部时触发。
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
