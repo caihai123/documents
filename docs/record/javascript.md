@@ -962,3 +962,10 @@ const deDupe = (myArray) => [...new Set(myArray)];
 const RGBToHex = (r, g, b) => ((r << 16) + (g << 8) + b).toString(16).padStart(6, '0');
 RGBToHex(255, 165, 1); // 'ffa501'
 ```
+
+## 监听当前标签页是否在前台
+```js
+document.addEventListener("visibilitychange", () => {
+  console.log(!document.hidden)
+});
+```
