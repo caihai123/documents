@@ -47,7 +47,8 @@ module.exports = {
                         'javascript',
                         'html',
                         'css',
-                        'vue'
+                        'vue',
+                        'react'
                     ]
                 },
             ],

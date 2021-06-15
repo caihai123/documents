@@ -131,6 +131,7 @@ new fullpage("#fullpage", {
 + [vue-print-nb](https://www.npmjs.com/package/vue-print-nb) 这是用于打印，简单，快速，方便，轻便的指令包装。
 + [v-click-outside](https://www.npmjs.com/package/v-click-outside) vue自定义指令，点击元素外部时触发。
 + [dayjs](https://dayjs.fenxianglu.cn/) 时间工具函数
++ [moment](https://momentjs.com/) 另一个时间处理函数
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
 + [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 启动一个本地开发服务
@@ -145,6 +146,9 @@ new fullpage("#fullpage", {
     "@":"${folder}/src"
 }
 ```
++ [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) 常用js代码片段
+
++ [Alibaba Cloud Toolkit](https://marketplace.visualstudio.com/items?itemName=alibabacloud-cloudtoolkit.toolkit-vscode) 可以在本地一键部署代码到服务器
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
 + [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
