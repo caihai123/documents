@@ -132,6 +132,8 @@ new fullpage("#fullpage", {
 + [v-click-outside](https://www.npmjs.com/package/v-click-outside) vue自定义指令，点击元素外部时触发。
 + [dayjs](https://dayjs.fenxianglu.cn/) 时间工具函数
 + [moment](https://momentjs.com/) 另一个时间处理函数
++ [puppeteer](https://github.com/puppeteer/puppeteer) node环境中模拟浏览器
++ [node-schedule](https://www.npmjs.com/package/node-schedule) 用来做定时任务
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
 + [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 启动一个本地开发服务
