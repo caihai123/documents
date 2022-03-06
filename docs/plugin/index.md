@@ -150,6 +150,7 @@ new fullpage("#fullpage", {
 + [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) 常用js代码片段
 
 + [Alibaba Cloud Toolkit](https://marketplace.visualstudio.com/items?itemName=alibabacloud-cloudtoolkit.toolkit-vscode) 可以在本地一键部署代码到服务器
++ [element-ui-helper](https://marketplace.visualstudio.com/items?itemName=oibit.element-ui-helper) element-ui组件属性提示
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
 + [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
