@@ -594,3 +594,116 @@ export default {
 ::: tip
 通过`refs`使用`addItemData`方法添加数据，通过`delItem`清空数据
 :::
+
+## 基于element-ui的图片预览组件
+
+::: details 点击查看代码
+``` vue
+<!-- main.vue -->
+<template>
+  <transition name="viewer-fade">
+    <ImageViewer
+      v-if="visible"
+      :url-list="urlList"
+      :z-index="zIndex"
+      :initial-index="initialIndex"
+      :append-to-body="appendToBody"
+      :mask-closable="maskClosable"
+      :on-close="closeViewer"
+    />
+  </transition>
+</template>
+
+<script>
+import ImageViewer from "element-ui/packages/image/src/image-viewer";
+
+export default {
+  components: { ImageViewer },
+  props: {
+    urlList: {
+      type: Array,
+      default: () => [],
+    },
+    zIndex: {
+      type: Number,
+      default: 2000,
+    },
+    initialIndex: {
+      type: Number,
+      default: 0,
+    },
+    appendToBody: {
+      type: Boolean,
+      default: true,
+    },
+    maskClosable: {
+      type: Boolean,
+      default: true,
+    },
+  },
+  data() {
+    return {
+      visible: false,
+    };
+  },
+  methods: {
+    closeViewer() {
+      this.visible = false;
+    },
+  },
+};
+</script>
+```
+
+``` js
+import Vue from "vue";
+import Main from "./main.vue";
+
+let instance;
+const MainConstructor = Vue.extend(Main);
+
+const ImageViewer = function(options = {}) {
+  //   if (Vue.prototype.$isServer) return; // 是否运行在服务器
+
+  instance = new MainConstructor({
+    propsData: options,
+  });
+
+  instance.$mount();
+  document.body.appendChild(instance.$el);
+
+  instance.visible = true;
+
+  return instance;
+};
+
+export default ImageViewer;
+```
+
+``` js
+// main.js
+import ImageViewer from "@/components/ImageViewer/index"; // 图片预览组件
+Vue.prototype.$imageViewer = ImageViewer;
+```
+
+```vue
+<!-- 用法 -->
+<template>
+  <el-button @click="imgViewer">点击预览</el-button>
+</template>
+
+<script>
+export default {
+  methods: {
+    imgViewer() {
+      this.$imageViewer({
+        urlList: [
+          "https://caihai123.com/Dribbble/lists/preview_teaser.png",
+          "https://caihai123.com/Dribbble/lists/news_teaser.png",
+        ],
+      });
+    },
+  },
+};
+</script>
+:::
