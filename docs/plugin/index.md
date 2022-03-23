@@ -135,6 +135,8 @@ new fullpage("#fullpage", {
 + [puppeteer](https://github.com/puppeteer/puppeteer) node环境中模拟浏览器
 + [node-schedule](https://www.npmjs.com/package/node-schedule) 用来做定时任务
 + [vue-pdf](https://www.npmjs.com/package/vue-pdf) 一个pdf预览组件
++ [patch-package](https://www.npmjs.com/package/patch-package) 直接修改依赖代码生成补丁
+
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
 + [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 启动一个本地开发服务
