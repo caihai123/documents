@@ -134,6 +134,7 @@ new fullpage("#fullpage", {
 + [moment](https://momentjs.com/) 另一个时间处理函数
 + [puppeteer](https://github.com/puppeteer/puppeteer) node环境中模拟浏览器
 + [node-schedule](https://www.npmjs.com/package/node-schedule) 用来做定时任务
++ [vue-pdf](https://www.npmjs.com/package/vue-pdf) 一个pdf预览组件
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
 + [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 启动一个本地开发服务
@@ -151,6 +152,7 @@ new fullpage("#fullpage", {
 + [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets) 常用js代码片段
 
 + [Alibaba Cloud Toolkit](https://marketplace.visualstudio.com/items?itemName=alibabacloud-cloudtoolkit.toolkit-vscode) 可以在本地一键部署代码到服务器
++ [element-ui-helper](https://marketplace.visualstudio.com/items?itemName=oibit.element-ui-helper) element-ui组件属性提示
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
 + [nuxt](https://www.nuxtjs.cn/) 一个基于 Vue.js 的服务端渲染应用框架
@@ -164,6 +166,7 @@ new fullpage("#fullpage", {
 + [quasar](http://www.quasarchs.com/) vue组件库
 + [bootstrapVue](https://code.z01.com/bootstrap-vue/) Bootstrap的vue版本
 + [flutter](http://flutter.axuer.com/) Flutter中文官网
++ [Electron](https://www.electronjs.org/zh/docs/latest/) Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
