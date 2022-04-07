@@ -714,6 +714,7 @@ export default {
 ::: tip
   参考组件 [WaterMark](https://procomponents.ant.design/components/water-mark),我只是将它由`react`变成了`vue`。
 :::
+
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/WaterMark.vue
 :::
