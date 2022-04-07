@@ -197,11 +197,13 @@ directives: {
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/CountUp.vue
 :::
+
 ## Sticky 滚动吸顶
 > 代码来自[这里](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Sticky/index.vue)
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/Sticky.vue
 :::
+
 ## Backtop 回到顶部
 > 复制的饿了么 [Backtop](https://element.eleme.cn/#/zh-CN/component/backtop) 组件，用的时候自己写样式和动画
 ::: details 点击查看代码
@@ -706,4 +708,12 @@ export default {
   },
 };
 </script>
+:::
+
+## 网页水印
+::: tip
+  参考组件 [WaterMark](https://procomponents.ant.design/components/water-mark),我只是将它由`react`变成了`vue`。
+:::
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/WaterMark.vue
 :::
