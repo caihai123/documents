@@ -1188,3 +1188,49 @@ document.addEventListener("visibilitychange", () => {
   console.log(!document.hidden);
 });
 ```
+
+## 获取渐变颜色组中指定位置的颜色
+``` js
+import Color from "color";
+
+/**
+ * 获取渐变颜色组中指定位置的颜色
+ * @param {Array} colorArr 渐变的颜色数组
+ * @param {Number} percent 需要获取的位置(0 - 1);默认：0.5
+ * @returns rgb 或者 rgba
+ */
+export const linearGradient = (colorArr = [], percent = 0.5) => {
+  const len = colorArr.length;
+  if (len < 2) {
+    // 如果只有一个颜色则返回当前颜色，如果为空则返回 rgb(0,0,0)
+    return Color(colorArr[0])
+      .rgb()
+      .string();
+  }
+
+  percent = Math.min(1, Math.max(0, percent));
+
+  // 获取当前 percent 所在的区间
+  const locaIndex = Math.floor(percent * (len - 1));
+
+  // 找出区间内的两个颜色
+  const beforeColor = Color(colorArr[locaIndex]).object();
+  const afterColor = Color(colorArr[locaIndex + 1]).object();
+
+  // 在此区间内的计算比例
+  const weight = (len - 1) * percent - locaIndex;
+
+  const resultsColor = Color.rgb({
+    r: beforeColor.r * (1 - weight) + afterColor.r * weight,
+    g: beforeColor.g * (1 - weight) + afterColor.g * weight,
+    b: beforeColor.b * (1 - weight) + afterColor.b * weight,
+    alpha:
+      (typeof beforeColor.alpha === "number" ? beforeColor.alpha : 1) *
+        (1 - weight) +
+      (typeof afterColor.alpha === "number" ? afterColor.alpha : 1) * weight,
+  });
+
+  return resultsColor.rgb().string();
+};
+
+```
