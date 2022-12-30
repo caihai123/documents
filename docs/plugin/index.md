@@ -186,3 +186,4 @@ new fullpage("#fullpage", {
 + [VuePress](https://vuepress.vuejs.org/zh/) Vue 驱动的静态网站生成器，本网站就是用的这个
 + [any-rule](https://any86.github.io/any-rule/) 常用正则大全
 + [icon-park](https://iconpark.oceanengine.com/home) 感觉和iconfont一样，没用过
++ [uiverse](https://uiverse.io) 提供了很多非常精美的小组件
