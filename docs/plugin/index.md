@@ -136,6 +136,11 @@ new fullpage("#fullpage", {
 + [node-schedule](https://www.npmjs.com/package/node-schedule) 用来做定时任务
 + [vue-pdf](https://www.npmjs.com/package/vue-pdf) 一个pdf预览组件
 + [patch-package](https://www.npmjs.com/package/patch-package) 直接修改依赖代码生成补丁
++ [lottie](https://github.com/airbnb/lottie) 一个动效插件，用来展示lottie json
++ [deepmerge](https://www.npmjs.com/package/deepmerge) 深度合并两个或多个对象的可枚举属性。
++ [memoize-one](https://www.npmjs.com/package/memoize-one) 根据参数缓存函数的结果
++ [animejs](https://animejs.com/) 一个轻量级的 JavaScript 动画库，适用于 CSS 属性、SVG、DOM 属性和 JavaScript 对象
++ [gsap](https://greensock.com/gsap/) 构建适用于所有主流浏览器的高性能动画。
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
@@ -171,6 +176,7 @@ new fullpage("#fullpage", {
 + [flutter](http://flutter.axuer.com/) Flutter中文官网
 + [Electron](https://www.electronjs.org/zh/docs/latest/) Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。
 + [ArcoDesign](https://arco.design/docs/spec/introduce) 又一个ui框架？有点搞不懂ui框架和设计系统的区别
++ [tailwindcss](https://www.tailwindcss.cn/) 总感觉在html上写很多class很丑
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
@@ -187,3 +193,5 @@ new fullpage("#fullpage", {
 + [any-rule](https://any86.github.io/any-rule/) 常用正则大全
 + [icon-park](https://iconpark.oceanengine.com/home) 感觉和iconfont一样，没用过
 + [uiverse](https://uiverse.io) 提供了很多非常精美的小组件
++ [mapshaper](https://mapshaper.org/) Shapefile、GeoJSON、TopoJSON、CSV 和其他几种数据互转
++ [dev.to](https://dev.to) 交友平台
