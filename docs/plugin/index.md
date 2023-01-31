@@ -164,6 +164,7 @@ new fullpage("#fullpage", {
 
 + [Alibaba Cloud Toolkit](https://marketplace.visualstudio.com/items?itemName=alibabacloud-cloudtoolkit.toolkit-vscode) 可以在本地一键部署代码到服务器
 + [element-ui-helper](https://marketplace.visualstudio.com/items?itemName=oibit.element-ui-helper) 提供element-ui组件属性提示及文档
++ [VueHelper](https://marketplace.visualstudio.com/items?itemName=oysun.vuehelper) vue文件智能提示插件
 
 ## 框架
 + [vue-element-admin](https://panjiachen.gitee.io/vue-element-admin-site/zh/) 一个后台前端解决方案，它基于 vue 和 element-ui实现。
