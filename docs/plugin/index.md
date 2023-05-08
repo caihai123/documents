@@ -145,6 +145,11 @@ new fullpage("#fullpage", {
 + [react-window](https://www.npmjs.com/package/react-window) `react-virtualized`的更轻量级替代方案，在这里[详细了解了这两个库的比较方式。](https://github.com/bvaughn/react-window#how-is-react-window-different-from-react-virtualized)
 + [vue-virtual-scroll-list](https://www.npmjs.com/package/vue-virtual-scroll-list) 用于vue的虚拟列表组件
 + [react-infinite-scroll-component](https://github.com/ankeetmaini/react-infinite-scroll-component) 用于react的无限滚动组件
++ [friendly-errors-webpack-plugin](https://www.npmjs.com/package/friendly-errors-webpack-plugin) 识别特定类别的 webpack 错误并清理、聚合它们并确定它们的优先级，以提供更好的开发人员体验。
++ [@soda/friendly-errors-webpack-plugin](https://github.com/sodatea/friendly-errors-webpack-plugin) 应该是和上面一模一样的，vue-cli在用这个
++ [ahooks](https://ahooks.js.org/zh-CN/) 一套高质量可靠的 React Hooks 库
+
+
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
@@ -175,13 +180,19 @@ new fullpage("#fullpage", {
 + [iView](http://v1.iviewui.com/) iView 是一套基于 Vue.js 的开源 UI 组件库，主要服务于 PC 界面的中后台产品。
 + [uni-app](https://uniapp.dcloud.io/) 一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉）等多个平台。
 + [WeUI](https://github.com/Tencent/weui) 一套同微信原生视觉体验一致的基础样式库
++ [Ant Design](https://ant.design/index-cn) Ant Design - 一套企业级 UI 设计语言和 React 组件库
 + [Ant Design Vue](https://www.antdv.com/docs/vue/introduce-cn/)  [Ant Design](https://ant.design/index-cn) 的 Vue 实现，开发和服务于企业级后台产品。
++ [Ant Design Charts](https://charts.ant.design/) AntV react 可视化组件库
++ [Ant Motion](https://motion.ant.design/index-cn) Ant Motion - Ant Design 的动效规范与组件
 + [quasar](http://www.quasarchs.com/) vue组件库
 + [bootstrapVue](https://code.z01.com/bootstrap-vue/) Bootstrap的vue版本
 + [flutter](http://flutter.axuer.com/) Flutter中文官网
 + [Electron](https://www.electronjs.org/zh/docs/latest/) Electron是一个使用 JavaScript、HTML 和 CSS 构建桌面应用程序的框架。
 + [ArcoDesign](https://arco.design/docs/spec/introduce) 又一个ui框架？有点搞不懂ui框架和设计系统的区别
 + [tailwindcss](https://www.tailwindcss.cn/) 总感觉在html上写很多class很丑
++ [Remix](https://remix.run/docs/en/1.16.0) Remix 是一个全栈 Web 框架，让您可以专注于用户界面并通过 Web 标准进行回溯，以提供快速、流畅且有弹性的用户体验。人们会喜欢使用你的东西。
++ [UmiJs](https://umijs.org/) 蚂蚁集团的可扩展的企业级前端应用框架
+
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
