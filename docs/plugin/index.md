@@ -148,8 +148,9 @@ new fullpage("#fullpage", {
 + [friendly-errors-webpack-plugin](https://www.npmjs.com/package/friendly-errors-webpack-plugin) 识别特定类别的 webpack 错误并清理、聚合它们并确定它们的优先级，以提供更好的开发人员体验。
 + [@soda/friendly-errors-webpack-plugin](https://github.com/sodatea/friendly-errors-webpack-plugin) 应该是和上面一模一样的，vue-cli在用这个
 + [ahooks](https://ahooks.js.org/zh-CN/) 一套高质量可靠的 React Hooks 库
-
-
++ [styled-components](https://styled-components.com/) 在js以组件的方式写css
++ [@pmmmwh/react-refresh-webpack-plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin) 一个实验性的Webpack 插件，可以为 React 组件启用“快速刷新”（也称为热重新加载）。需要和 [react-refresh](https://www.npmjs.com/package/react-refresh) 一起使用
++ [react-custom-scrollbars](https://www.npmjs.com/package/react-custom-scrollbars) 自定义滚动条
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
@@ -192,7 +193,7 @@ new fullpage("#fullpage", {
 + [tailwindcss](https://www.tailwindcss.cn/) 总感觉在html上写很多class很丑
 + [Remix](https://remix.run/docs/en/1.16.0) Remix 是一个全栈 Web 框架，让您可以专注于用户界面并通过 Web 标准进行回溯，以提供快速、流畅且有弹性的用户体验。人们会喜欢使用你的东西。
 + [UmiJs](https://umijs.org/) 蚂蚁集团的可扩展的企业级前端应用框架
-
++ [Redux](https://cn.redux.js.org/) Redux 是 JavaScript 应用的状态容器，提供可预测的状态管理。
 
 ## 网站
 + [Travis CI](https://travis-ci.org/) 免费开源项目构建服务器
