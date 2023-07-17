@@ -732,3 +732,14 @@ export default {
 
 <<< @/docs/.vuepress/components/tree-select/TreeItem.vue
 :::
+
+## tree-table-line
+::: tip
+  某些情况下，可能需要给el-table中的树添加层级指示线
+:::
+
+<img :src="$withBase('/static/img/tree-table-line.png')" alt="foo">
+
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/tree-table-line.vue
+:::
