@@ -718,3 +718,17 @@ export default {
 ::: details 点击查看代码
 <<< @/docs/.vuepress/components/WaterMark.vue
 :::
+
+## el-tree-select
+
+::: tip
+  只能在ElEment中使用，也是为了弥补element2中没有此组件的问题
+:::
+
+::: details 点击查看代码
+<<< @/docs/.vuepress/components/tree-select/index.vue
+
+<<< @/docs/.vuepress/components/tree-select/tree.vue
+
+<<< @/docs/.vuepress/components/tree-select/TreeItem.vue
+:::

@@ -1190,7 +1190,8 @@ document.addEventListener("visibilitychange", () => {
 ```
 
 ## 获取渐变颜色组中指定位置的颜色
-``` js
+
+```js
 import Color from "color";
 
 /**
@@ -1232,5 +1233,32 @@ export const linearGradient = (colorArr = [], percent = 0.5) => {
 
   return resultsColor.rgb().string();
 };
+```
 
+## axios 上传文件
+
+```js
+httpRequest(content) {
+  const formData = new FormData();
+  formData.append(content.filename, content.file);
+  Object.keys(content.data || {}).forEach((key) => {
+    formData.append(key, content.data[key]);
+  });
+
+  axios({
+    url: content.action,
+    method: "post",
+    headers: {
+      "Content-Type": "multipart/form-data",
+      ...content.headers,
+    },
+    data: formData,
+  })
+    .then((res) => {
+      content.onSuccess(res.data, content.file);
+    })
+    .catch((err) => {
+      content.onError(err, content.file);
+    });
+},
 ```
