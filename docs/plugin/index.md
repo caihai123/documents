@@ -151,6 +151,13 @@ new fullpage("#fullpage", {
 + [styled-components](https://styled-components.com/) 在js以组件的方式写css
 + [@pmmmwh/react-refresh-webpack-plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin) 一个实验性的Webpack 插件，可以为 React 组件启用“快速刷新”（也称为热重新加载）。需要和 [react-refresh](https://www.npmjs.com/package/react-refresh) 一起使用
 + [react-custom-scrollbars](https://www.npmjs.com/package/react-custom-scrollbars) 自定义滚动条
++ [react-flip-toolkit](https://www.npmjs.com/package/react-flip-toolkit) React中实现 <a href="https://aerotwist.com/blog/flip-your-animations/" target="_blank" rel="noreferrer">FLIP</a> 动画
++ [react-transition-group](https://reactcommunity.org/react-transition-group/) react中实现进入退出过渡动画的库
++ [clipboard-copy](https://www.npmjs.com/package/clipboard-copy) 轻量级的 Web 剪贴板复制功能
++ [react-draggable](https://github.com/react-grid-layout/react-draggable) react 拖动组件
++ [react-markdown](https://github.com/remarkjs/react-markdown#readme) React 组件渲染 markdown。
++ [rehype-highlight](https://github.com/rehypejs/rehype-highlight#readme) 上一个组件的插件，用来实现代码高亮。
++ [starry-night](https://github.com/wooorm/starry-night) github 的代码高亮，比较重，不适合在浏览器中使用
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
