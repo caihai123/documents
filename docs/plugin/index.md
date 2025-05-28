@@ -157,7 +157,11 @@ new fullpage("#fullpage", {
 + [react-draggable](https://github.com/react-grid-layout/react-draggable) react 拖动组件
 + [react-markdown](https://github.com/remarkjs/react-markdown#readme) React 组件渲染 markdown。
 + [rehype-highlight](https://github.com/rehypejs/rehype-highlight#readme) 上一个组件的插件，用来实现代码高亮。
++ [github-markdown-css](https://github.com/sindresorhus/github-markdown-css) GitHub Markdown css，纯css 可以在和 [react-markdown](https://github.com/remarkjs/react-markdown#readme) 配合使用（不包括代码块高亮）
 + [starry-night](https://github.com/wooorm/starry-night) github 的代码高亮，比较重，不适合在浏览器中使用
++ [pdf-lib](https://pdf-lib.js.org/) 在任何 JavaScript 环境中创建和修改 PDF 文档。
++ [download](https://www.npmjs.com/package/download) download() 函数用于从 JavaScript 触发文件下载。
++ [react-draggable](https://www.npmjs.com/package/react-draggable) React拖动组件
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
