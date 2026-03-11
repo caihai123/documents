@@ -169,6 +169,7 @@ new fullpage("#fullpage", {
 + [@fsegurai/codemirror-theme-bundle](https://github.com/fsegurai/codemirror-themes) CodeMirror 6主题库
 + [svelte](https://svelte.dev/) Svelte 是一个将组件编译成原生高性能 JavaScript 的前端框架。
 + [TanStack](https://tanstack.com/) High-quality open-source software for web developers.
++ [zustand](https://zustand-demo.pmnd.rs/) 一个 React 状态管理库
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
