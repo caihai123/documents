@@ -166,6 +166,7 @@ new fullpage("#fullpage", {
 + [bytemd](https://github.com/pd4d10/bytemd) ByteMD 是一个用 Svelte 构建的 Markdown 编辑器组件。
 + [Monaco](https://microsoft.github.io/monaco-editor/) Vscode 核心编辑器
 + [CodeMirror](https://codemirror.net/) CodeMirror 是一个用于网页的代码编辑器组件。比上一个更轻量
++ [@fsegurai/codemirror-theme-bundle](https://github.com/fsegurai/codemirror-themes) CodeMirror 6主题库
 + [svelte](https://svelte.dev/) Svelte 是一个将组件编译成原生高性能 JavaScript 的前端框架。
 + [TanStack](https://tanstack.com/) High-quality open-source software for web developers.
 
