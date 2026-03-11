@@ -179,7 +179,7 @@ const asyncRes = await Promise.all(
   arr.map(async (i) => {
     await sleep(10);
     return i + 1;
-  })
+  }),
 );
 
 console.log(asyncRes);
@@ -197,7 +197,7 @@ await Promise.all(
   arr.map(async (i) => {
     await sleep(10 - i);
     console.log(i);
-  })
+  }),
 );
 
 // 3
@@ -691,7 +691,7 @@ console.log(localeString);
 ::: details 点击查看代码
 
 ```js
-const formatNumber = function(num, options) {
+const formatNumber = function (num, options) {
   var defaults = {
     decimalPlaces: 0, //小数点后数量
     decimal: ".",
@@ -725,10 +725,10 @@ const formatNumber = function(num, options) {
   x1 = x3;
   // 可选数字替换
   if (_options.numerals && _options.numerals.length) {
-    x1 = x1.replace(/[0-9]/g, function(w) {
+    x1 = x1.replace(/[0-9]/g, function (w) {
       return _options.numerals[+w];
     });
-    x2 = x2.replace(/[0-9]/g, function(w) {
+    x2 = x2.replace(/[0-9]/g, function (w) {
       return _options.numerals[+w];
     });
   }
@@ -780,7 +780,7 @@ let setCookie = () => {
       _password: _password,
       date: new Date().getTime(),
     }),
-    _keyContent
+    _keyContent,
   );
   document.cookie = `token=${encryStr}`;
 };
@@ -810,7 +810,7 @@ let validation = () => {
   if (cookieToken) {
     try {
       let TokenData = JSON.parse(
-        _encryption.decryption(cookieToken.split("=")[1], _keyContent)
+        _encryption.decryption(cookieToken.split("=")[1], _keyContent),
       );
       if (
         TokenData._username === _username &&
@@ -1067,7 +1067,7 @@ const obj2 = { e: "e", f: "f" };
 const obj3 = { ...obj1, ...obj2 }; // 对象合并
 //--------------分割线--------------
 const [startDate, endDate] = (date || []).map((item) =>
-  moment(item).format("YYYY-MM-DD")
+  moment(item).format("YYYY-MM-DD"),
 );
 ```
 
@@ -1110,7 +1110,7 @@ const user = {
 
 ```js
 const preson = {
-  method: function() {},
+  method: function () {},
 };
 // 写为
 const preson = {
@@ -1123,10 +1123,10 @@ const preson = {
 
 ```js
 const handler = {
-  get: function(obj, prop) {
+  get: function (obj, prop) {
     return prop in obj ? obj[prop] : 37;
   },
-  set: function(obj, prop, value) {
+  set: function (obj, prop, value) {
     console.log(value);
   },
 };
@@ -1143,7 +1143,7 @@ p.name = "ch"; // 这时会打印 'ch'
 ```js
 function timeFormat(time, format = "yyyy-MM-dd") {
   const t = new Date(parseInt(time));
-  const tf = function(i) {
+  const tf = function (i) {
     return (i < 10 ? "0" : "") + i;
   };
   return format.replace(/yyyy|MM|dd|HH|mm|ss/g, (a) => {
@@ -1204,9 +1204,7 @@ export const linearGradient = (colorArr = [], percent = 0.5) => {
   const len = colorArr.length;
   if (len < 2) {
     // 如果只有一个颜色则返回当前颜色，如果为空则返回 rgb(0,0,0)
-    return Color(colorArr[0])
-      .rgb()
-      .string();
+    return Color(colorArr[0]).rgb().string();
   }
 
   percent = Math.min(1, Math.max(0, percent));
@@ -1261,4 +1259,17 @@ httpRequest(content) {
       content.onError(err, content.file);
     });
 },
+```
+
+## 判断浏览器类型
+```js
+const isSafari =
+  navigator.vendor &&
+  navigator.vendor.indexOf("Apple") > -1 &&
+  navigator.userAgent &&
+  navigator.userAgent.indexOf("CriOS") === -1 &&
+  navigator.userAgent.indexOf("FxiOS") === -1;
+
+const isFirefox =
+  navigator.userAgent && navigator.userAgent.indexOf("Firefox") >= 0;
 ```
