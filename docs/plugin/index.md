@@ -162,6 +162,12 @@ new fullpage("#fullpage", {
 + [pdf-lib](https://pdf-lib.js.org/) 在任何 JavaScript 环境中创建和修改 PDF 文档。
 + [download](https://www.npmjs.com/package/download) download() 函数用于从 JavaScript 触发文件下载。
 + [react-draggable](https://www.npmjs.com/package/react-draggable) React拖动组件
++ [markdown-it](https://github.com/markdown-it/markdown-it) 一款优秀的 Markdown 解析器。速度快，易于扩展。
++ [bytemd](https://github.com/pd4d10/bytemd) ByteMD 是一个用 Svelte 构建的 Markdown 编辑器组件。
++ [Monaco](https://microsoft.github.io/monaco-editor/) Vscode 核心编辑器
++ [CodeMirror](https://codemirror.net/) CodeMirror 是一个用于网页的代码编辑器组件。比上一个更轻量
++ [svelte](https://svelte.dev/) Svelte 是一个将组件编译成原生高性能 JavaScript 的前端框架。
++ [TanStack](https://tanstack.com/) High-quality open-source software for web developers.
 
 ### VS Code
 + [Chinese](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) VS Code 的中文（简体）语言包
